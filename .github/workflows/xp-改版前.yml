@@ -21,7 +21,7 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/sunshine-yckx/ziye.git ~/ziye
+          git clone https://github.com/sunshinekxz/.git ~/yezi
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -29,13 +29,13 @@ jobs:
       - name: npm install
         if: env.XP_iboxpayHEADER
         run: |
-          cd ~/ziye
+          cd ~/yezi
           git checkout main
           npm install
       - name: '运行 【笑谱】'
         if: env.XP_iboxpayHEADER
         run: |
-          cd ~/ziye
+          cd ~/yezi
           node Task/iboxy.js
         env:
           
