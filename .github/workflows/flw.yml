@@ -6,7 +6,7 @@ name: 返利网
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0 12,23,2 * * *'
+     - cron: '0 12,23,2,3 * * *'
   watch:
     types: started
 jobs:
@@ -23,19 +23,17 @@ jobs:
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/sunshine-yckx/JavaScript.git ~/JavaScript
+          git clone https://github.com/sunshinekxz/JavaScript.git ~/JavaScript
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
           node-version: 12.x
       - name: npm install
-        if: env.FL_flwURL
         run: |
           cd ~/JavaScript
           git checkout master
           npm install
       - name: '运行 【返利网】'
-        if: env.FL_flwURL
         run: |
           cd ~/JavaScript
           node Task/flw.js
