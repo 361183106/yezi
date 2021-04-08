@@ -13,14 +13,10 @@ jobs:
   build:
     runs-on: ubuntu-latest
     if: github.event.repository.owner.id == github.event.sender.id
-    env:
-        XL_URL: ${{ secrets.XL_URL }}
-        XL_HEADER: ${{ secrets.XL_HEADER }}		
-        
     steps:
       - name: Checkout
         run: |
-          git clone https://github.com/sunshine-yckx/ziye.git ~/ziye
+          git clone https://github.com/sunshinekxz/yezi.git ~/yezi
       - name: Use Node.js 12.x
         uses: actions/setup-node@v1
         with:
@@ -28,16 +24,16 @@ jobs:
       - name: npm install
         if: env.XL_URL
         run: |
-          cd ~/ziye
+          cd ~/yezi
           git checkout main
           npm install
       - name: '运行 【小乐】'
-        if: env.XL_URL
         run: |
-          cd ~/ziye
+          cd ~/yezi
           node Task/xiaole1.js
         env:
-          
+          XL_URL: ${{ secrets.XL_URL }}
+          XL_HEADER: ${{ secrets.XL_HEADER }}		
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
           TG_BOT_TOKEN: ${{ secrets.TG_BOT_TOKEN }}
