@@ -65,13 +65,35 @@ https://raw.githubusercontent.com/age174/-/main/feizao.box.json
 */
 
 const $ = new Env('云扫码')
-let ysm = $.getjson('ysm', [])
+let ysm = $.getjson('ysm', [
+  {
+    "openid": "oksnzwYXoohXajg0TS0T2zFDO6G8",
+    "domain": "http://aaa.saomayun.com.cn/yunonline/v1/",
+    "ua": "Mozilla/5.0 (iPad; CPU OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.18(0x17001233) NetType/WIFI Language/zh_CN",
+    "secret": "eyJpdiI6Im5jYTVleGpEYlVFVUtwMFgxYjZDckE9PSIsInZhbHVlIjoiTGF5XC8zbWVxXC9KTkFJeUs1ZHdMSUQ1eEs5dzNCbmVKcm1SalFnMnRGZ3M3anJwRWZBUE5TRDZSYW5lMmxFWm5hbTVCMVRkODl2aXhuc01UbFVHVXV2dFhleTdFbVhvZEdnV1lhTUZENWtJSFViUVVwUXpqYUFWbnFLbWtlTENoY1pxUmFkS0dWd3RyMWlwcTNmQUhlRHFOVGZuRElQT2JVWEJlSWcwRUtUcjVUM0dDblN1dU03bE44Qk01UmsyaE9NTitvdWhvZHdjbDFXVG9jdUJ6Q1dsakJaSWl1V2pwZ0FSMUxESDZUY3NlSTRUTzJSSUNtTlhhTng0Q25LSDJxSGw5OTIwcnN2QXhlNkhIUU1kY0RlT0pBOHFzdGZIMnhNZHZNVW9iWVVBWmp0ZlwvSjY4SVR3cGRxWTRcL21QM2trIiwibWFjIjoiYjQzODY2ZGM4YWMxOTY5MDg4Zjk4YzlmMTdhNDZjYTk0YmI2NzhkNzAxMWVjN2E5ODNlZDQwMjM0MGU5OTc0NiJ9",
+    "txbody": "openid=oksnzwYXoohXajg0TS0T2zFDO6G8&request_id=ebf1528640499123369456d9538b6ac7&ua=1"
+  },
+  {
+    "openid": "oksnzweqTOH1SerDvDb1wYhp-umw",
+    "domain": "http://aaa.saomayun.com.cn/yunonline/v1/",
+    "ua": "Mozilla/5.0 (iPad; CPU OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.18(0x17001233) NetType/WIFI Language/zh_CN",
+    "secret": "eyJpdiI6Ik5ENnNiandcLzViRFhrbkZmenU2a3hnPT0iLCJ2YWx1ZSI6IkNHOVFtYmhUaFFxWkt0VGwxTlRrSUVVTFIzcGNkSXlMTnE5Z2dsNk1sRVZhc0ptUmpXZDExZWJDdE9qY2czd1VnRVZSQlwvQzNLVXo2VGp6bEp3dFFoRUt1NnVzNlVpWWo2QnE3dHp2dVR3RUViY2t1am9obHp5Ynl0cnZiVFBJUVZ2RHl3bVo4T1ZmWEQ5c0UwbFJlcXowVjZrYjBJbDFKSGo5Y29hYVpUUWUrN3dZTzBLZ3c2ckRveXlPNDZ5enhnWEhnV29VRUlLY2VJVk1wRWZrOXpDK1ZmdmcxNzBsRUZFWG4yYnhLT25TMGQ3TnNIOTRFd0c3N3JKaXVEVXdsUFwvNEFNNGlGUXdscDlrWDdJSmFublVtK1BxTzNXTFJjaHJab3RTdXBZNDNNekREamNjM3pSOHY4ZlBDQ1ZjNFciLCJtYWMiOiJmMTBkMzJlM2MyZjdlNjljYWE2ZTNmYzY4OTUwN2NhMDIwY2JiMWJjOTY5MTNkZjA0ZjU1MDY1NWU2ODU3YWRiIn0%3D",
+    "txbody": "openid=oksnzweqTOH1SerDvDb1wYhp-umw&request_id=435628cccbb7c1fe2a1a6a1269da84f8&ua=1"
+  },
+  {
+    "openid": "oksnzwYKmmtg7MxHGwY8wB_GSrUQ",
+    "domain": "http://aaa.saomayun.com.cn/yunonline/v1/",
+    "ua": "Mozilla/5.0 (iPad; CPU OS 14_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Mobile/15E148 MicroMessenger/7.0.18(0x17001233) NetType/WIFI Language/zh_CN",
+    "secret": "eyJpdiI6Ik1qVlV2Y2habFFsVWJEYm9GbStwZ1E9PSIsInZhbHVlIjoiclAwaFwvSHNmZExUZnZmcXFCVU83RVBPaitwRk1sNGxTMEtraVBnY21IcUp3eWtidngwdmJXMXRmSFROUm1tUzlzOEpSdlNqQTRCYitjOUJvVTlaR1MxUTF4ZFNCcTdyckt5Zk1oMDQ5aHBraVhGSnVwemVVQUhQSE94UVo0NVdTR0tyZjN0NTF0R216eFwveU9ZcENoSFZZTmxPemhVQmNrSzkyWWw4SVI1Rk95aXBOemtIcUVqV3Ywd0lkY2NONTU5OTM1TURMQWNnWVVVazJjcG1icGNJQVJVM0NkK3oyVEZQcWJFRVNZdTBKKzZKd29WZ0dYYjdnZ2tsR2RyN21PVHJMVENvczBlVGhLSmRTQXFCYWZQNXk4QkFyc0FHaEZqNGxnNDRCcDFKSm9PdFwvQm9cL1wvRStaeDY2a0pVNDVlKyIsIm1hYyI6ImQxYTBmOGQwYjdmNzA5Yzk5MDcwMmI5NTUwODcyZDZkNWNhMmU2MWVhYTgyYjI4NjlhYWM4ZTZkYmMwMDQ5ZDUifQ%3D%3D",
+    "txbody": "openid=oksnzwYKmmtg7MxHGwY8wB_GSrUQ&request_id=4f6bd9ddea2c88f8032c06d51a5aa013&ua=1"
+  }
+])
 let needNotice = $.getval('ysmNotice') == 'true'
 let ysmBanfirstTask = $.getval('ysmBanfirstTask') == 'true' // 禁止脚本执行首个任务，避免每日脚本跑首次任务导致微信限制
 let ysmBanhalfTask = $.getval('ysmBanhalfTask') == 'true' // 脚本执行完第50个任务时退出任务，再手动阅读2篇避免出现微信限制
-let ysmtxAmt = ($.getval('ysmtxAmt') || '0') - 0  // 此处修改提现金额，0.3元等于3000币，默认不提现
+let ysmtxAmt = ($.getval('ysmtxAmt') || '0.5') - 0  // 此处修改提现金额，0.3元等于3000币，默认不提现
 ysmtxAmt = ysmtxAmt > 3000 ? (parseInt(ysmtxAmt / 1000) * 1000) : ysmtxAmt > 0 ? 3000 : 0
-let concurrency = ($.getval('ysmConcurrency') || '1') - 0 // 并发执行任务的账号数，默单账号循环执行
+let concurrency = ($.getval('ysmConcurrency') || '3') - 0 // 并发执行任务的账号数，默单账号循环执行
 concurrency = concurrency < 1 ? 1 : concurrency
 
 const execNo = [] // 允许执行的账号，为空时不限制，指定时，按照指定的来判断处理，例如：[1,3]
