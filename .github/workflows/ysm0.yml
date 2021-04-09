@@ -1,11 +1,11 @@
 
-name: ysm2云扫码
+name: ysm0云扫码0
 
 
 on:
   workflow_dispatch:
   schedule:
-     - cron: '0,30 1-15 * * *'
+     - cron: '0 1-15 * * *'
   watch:
     types: started
 jobs:
@@ -31,7 +31,6 @@ jobs:
         run: |
           npm install
       - name: '运行 【ysm】'
-        if: env.YSM_HD
         run: |
           node Task/ysm0.js
         env:
