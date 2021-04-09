@@ -60,7 +60,11 @@ hostname = app.hubonews.com
 const $ = new Env('西梅');
 let status;
 status = (status = ($.getval("ximeistatus") || "1") ) > 1 ? `${status}` : ""; // 账号扩展字符
-const ximeiurlArr = [], ximeihdArr = [],ximeicount = ''
+const ximeiurlArr = ['https://app.hubonews.com/v3/articles/list
+https://app.hubonews.com/v4/articles/list
+https://app.hubonews.com/v4/articles/list'], ximeihdArr = ['{"X_CLIENT_APP":"com.tigerye.tigerobo","User-Agent":"tigerobo/2.6.3 (iPad; iOS 14.2; Scale/2.00)","Host":"app.hubonews.com","BRAND_PRODUCT":"Apple-iPad11,6","X_CLIENT_VERSION":"2.6.3","X_CLIENT_IDFA":"E9BCDB57-1636-4BB1-AE71-AFDA41E082E9","DEVICE_ID":"C82ACDEB-5554-4136-80CE-B242D1DD887B","X_CLIENT_CHANNEL":"App Store","X_CLIENT_PLATFORM":"iOS","Content-Length":"21","Connection":"keep-alive","X_CLIENT_COUNTRY":"CN","Accept-Language":"zh-Hans-CN;q=1","X_CLIENT_BUILD":"213","API_AUTHORIZATION":"NbJQtniNMYLMdjr0dPK0","X_CLIENT_TRANSLATION_LANGUAGE":"en","Accept":"*/*","Content-Type":"application/json","X_CLIENT_LANGUAGE":"zh","Accept-Encoding":"gzip, deflate, br"}
+{"X_CLIENT_APP":"com.tigerye.tigerobo","User-Agent":"tigerobo/2.6.4 (iPad; iOS 14.2; Scale/2.00)","Host":"app.hubonews.com","BRAND_PRODUCT":"Apple-iPad11,6","X_CLIENT_VERSION":"2.6.4","X_CLIENT_IDFA":"E9BCDB57-1636-4BB1-AE71-AFDA41E082E9","DEVICE_ID":"C82ACDEB-5554-4136-80CE-B242D1DD887B","X_CLIENT_CHANNEL":"App Store","X_CLIENT_PLATFORM":"iOS","Content-Length":"21","Connection":"keep-alive","X_CLIENT_COUNTRY":"CN","Accept-Language":"zh-Hans-CN;q=1","X_CLIENT_BUILD":"220","API_AUTHORIZATION":"M0TVkO0frPhwszSsnNDm","X_CLIENT_TRANSLATION_LANGUAGE":"en","Accept":"*/*","Content-Type":"application/json","X_CLIENT_LANGUAGE":"zh","Accept-Encoding":"gzip, deflate, br"}
+{"X_CLIENT_APP":"com.tigerye.tigerobo","User-Agent":"tigerobo/2.6.4 (iPad; iOS 14.2; Scale/2.00)","Host":"app.hubonews.com","BRAND_PRODUCT":"Apple-iPad11,6","X_CLIENT_VERSION":"2.6.4","X_CLIENT_IDFA":"E9BCDB57-1636-4BB1-AE71-AFDA41E082E9","DEVICE_ID":"C82ACDEB-5554-4136-80CE-B242D1DD887B","X_CLIENT_CHANNEL":"App Store","X_CLIENT_PLATFORM":"iOS","Content-Length":"21","Connection":"keep-alive","X_CLIENT_COUNTRY":"CN","Accept-Language":"zh-Hans-CN;q=1","X_CLIENT_BUILD":"220","API_AUTHORIZATION":"SjoBWWvdhCjMwWCXpvyX","X_CLIENT_TRANSLATION_LANGUAGE":"en","Accept":"*/*","Content-Type":"application/json","X_CLIENT_LANGUAGE":"zh","Accept-Encoding":"gzip, deflate, br"}'],ximeicount = ''
 let times = Math.round(Date.now())
 let ximeiurl = $.getdata('ximeiurl')
 let ximeihd = $.getdata('ximeihd')
