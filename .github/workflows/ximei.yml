@@ -3,9 +3,9 @@
 #   branches: 
 #   - master 
 
-name: 番茄看看
-
+name: 西梅固定ck
 on:
+
   workflow_dispatch:
   schedule:
      - cron: '3 3,8 * * *'
