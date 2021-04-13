@@ -30,9 +30,8 @@ jobs:
         run: |
           npm install
       - name: '运行 【ysm】'
-        if: env.YSM_HD
         run: |
-          node Task/ysm1.js
+          node Task/ysm.js
         env:
           PUSH_KEY: ${{ secrets.PUSH_KEY }}
           BARK_PUSH: ${{ secrets.BARK_PUSH }}
